@@ -1,0 +1,405 @@
+$bg-main: #29a6dc;
+$bg-secondary: #1e1e1e;
+$additional-main: #ff4f2c;
+$additional-secondary: #0170ba;
+$font-main: #fff;
+$font-secondary: #000;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: 'Saira', sans-serif;
+  font-size: clamp(.9em, calc(.3em + 1.6vmin), 4em);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 2rem auto;
+  border: 1px solid $font-main;
+  padding: .4rem 1.2rem;
+  background-color: transparent;
+  color: $font-main;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+  &:hover {
+    color: $bg-main;
+    background-color: $font-main;
+  }
+}
+
+.h1,
+.h2,
+.h3 {
+  text-transform: uppercase;
+  font-family: 'Saira Condensed', sans-serif;
+}
+
+.h1 {
+  font-size: 5rem;
+  line-height: 1.6;
+}
+
+.h2 {
+  line-height: 1.2;
+  font-size: 3rem;
+}
+
+.h3 {
+  line-height: 1.2;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+// header
+
+.header {
+  min-height: 100vh;
+  background-color: $bg-main;
+  color: #fff;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 100vh;
+    padding-bottom: 0;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+}
+
+// features 
+
+.features {
+
+  &__h2 {
+    margin-bottom: 3rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__box {
+    flex-basis: 33%;
+    flex-grow: 1;
+    min-width: 13rem;
+    padding: .5rem 1rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  &__img {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: .7rem;
+  }
+}
+
+// projects 
+
+.projects {
+  background-color: $bg-secondary;
+  color: $font-main;
+
+  &__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__h2 {
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+
+    &:nth-of-type(odd) {
+      background-color: $additional-main;
+    }
+
+    &:nth-of-type(even) {
+      background-color: $additional-secondary;
+    }
+  }
+
+  &__img-box,
+  &__text-box {
+    flex-basis: 50%;
+  }
+
+  &__text-box {
+    text-align: left;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__h3 {
+    padding: 3rem 2rem 2rem 2rem;
+    font-family: 'Saira', sans-serif;
+    letter-spacing: 2px;
+  }
+
+  &__description {
+    padding: 2rem 2rem 5rem 2rem;
+  }
+
+  &__line {
+    color: $font-main;
+  }
+}
+
+// motto
+.motto {
+  background-image: linear-gradient(rgba(0, 63, 114, 0.5), rgba(0, 63, 114, 0.9)), url('../img/motto.jpg');
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: $font-main;
+
+  &__text {
+    max-width: 24rem;
+    margin: 0 auto;
+    padding: 6rem 0 3rem 0;
+    line-height: 2;
+    letter-spacing: 2px;
+    font-style: italic;
+  }
+
+  &__author {
+    padding-bottom: 4rem;
+  }
+}
+
+// hobbies
+
+.hobbies {
+  &__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  &__h2 {
+    margin-bottom: 3rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__box {
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: rgba(0, 62, 112, .7);
+    background-color: rgba(0, 0, 0, .6);
+    backdrop-filter: blur(7px);
+    color: $font-main;
+    font-size: 1.4rem;
+    opacity: 0;
+    transition: opacity .3s;
+  }
+
+  &__box:hover &__description {
+    opacity: 1;
+  }
+}
+
+// contact
+
+.contact {
+  background-color: $bg-secondary;
+  color: $font-main;
+
+  &__h2 {
+    margin-bottom: 3rem;
+  }
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    border: none;
+    padding: .5rem;
+    font-size: 1.2rem;
+
+    &::placeholder {
+      font-family: 'Saira', sans-serif;
+      font-weight: 400;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem 2rem 1rem;
+    opacity: .8;
+    transition: opacity .3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+// footer
+
+.footer {
+  padding: 2rem;
+  background-color: $bg-main;
+  color: $font-main;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  .header {
+    &__wrapper {
+      flex-direction: row;
+    }
+
+    &__img-box {
+      align-self: flex-end;
+      margin-right: -7rem;
+    }
+
+    &__content {
+      text-align: left;
+    }
+  }
+
+  .projects {
+
+    &__wrapper {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    &__box {
+      flex-direction: row;
+
+      &:nth-of-type(odd) {
+        & .projects__line {
+          margin-right: 2rem;
+        }
+      }
+
+      &:nth-of-type(even) {
+        & .projects__img-box {
+          order: 1;
+        }
+
+        & .projects__line {
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+
+  .hobbies {
+    &__content {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__box {
+      flex-basis: 50%;
+    }
+  }
+}
